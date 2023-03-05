@@ -28,6 +28,7 @@ const banners = [
   'https://picsum.photos/200/150',
 ]
 const privacys = ['Public', 'Curated Audience', 'Community Only']
+
 export default function Home() {
   const { register, handleSubmit, setValue } = useForm()
   useEffect(() => {
@@ -73,8 +74,8 @@ export default function Home() {
   }
   return (
     <form tw="p-4 container mx-auto mt-16">
-      <section id="title" tw="flex justify-between h-max gap-4">
-        <div tw="relative w-[40%] overflow-visible mt-8">
+      <div tw="flex justify-between h-max gap-4">
+        <section id="title" tw="relative w-[40%] overflow-visible mt-8">
           <div
             contentEditable
             onInput={(e) => setValue('title', e.currentTarget.innerText)}
@@ -159,7 +160,7 @@ export default function Home() {
               }
             />
           </div>
-        </div>
+        </section>
         <ImagePicker
           tw="w-[60%]"
           values={banners}
@@ -169,7 +170,7 @@ export default function Home() {
             setValue('banner', banner)
           }}
         />
-      </section>
+      </div>
       <div tw="w-[60%] rounded-2xl flex flex-col gap-4 ">
         <section id="description" tw="flex flex-col">
           <h3>Description</h3>
