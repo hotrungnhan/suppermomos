@@ -51,7 +51,15 @@ export default function ImagePicker(props: ImagePickerProps) {
         <S.Model.Wrapper>
           <S.Model.Header.Wrapper>
             <h1 tw="text-[#545D73] font-bold text-lg">Choose A Banner</h1>
-            <S.Model.Button.Close onClick={close}>X</S.Model.Button.Close>
+            <S.Model.Button.Close onClick={close}>
+              <Image
+                src="images/icon/cross.svg"
+                tw="relative! my-auto"
+                width={16}
+                height={16}
+                alt="close"
+              ></Image>
+            </S.Model.Button.Close>
           </S.Model.Header.Wrapper>
           <S.Model.Divider />
           <S.Model.Content.Wrapper>
