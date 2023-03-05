@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState } from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
@@ -28,7 +29,13 @@ export default function TagPicker(props: TagPickerProps) {
       <S.SelectedWrapper>
         {seleted.map((s, idx) => (
           <S.Selected onClick={() => unselectItem(idx)} key={s + idx}>
-            {s} <img src="./cross.svg" tw="inline my-auto" />
+            {s}{' '}
+            <Image
+              src="images/icon/cross.svg"
+              tw="inline my-auto relative!"
+              fill
+              alt="cross"
+            />
           </S.Selected>
         ))}
       </S.SelectedWrapper>

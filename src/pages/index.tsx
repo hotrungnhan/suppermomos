@@ -163,7 +163,11 @@ export default function Home() {
         <ImagePicker
           tw="w-[60%]"
           values={banners}
-          onChange={(banner) => setValue('banner', banner)}
+          onChange={(banner) => {
+            console.log(banner)
+
+            setValue('banner', banner)
+          }}
         />
       </section>
       <div tw="w-[60%] rounded-2xl flex flex-col gap-4 ">

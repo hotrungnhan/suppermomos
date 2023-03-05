@@ -1,5 +1,4 @@
 // @ts-nocheck
-
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { useCallback, useState } from 'react'
@@ -21,9 +20,10 @@ export default function ImagePicker(props: ImagePickerProps) {
     undefined
   )
   const emitOnChange = useCallback(() => {
-    setSelectedImages(props.values[currentSelect])
-    props.onChange && props.onChange(selectedImage)
-  }, [currentSelect, props, selectedImage])
+    const seletedImage = props.values[currentSelect]
+    setSelectedImages(seletedImage)
+    props.onChange && props.onChange(seletedImage)
+  }, [currentSelect, props])
   return (
     <StyledPopup
       modal
