@@ -1,13 +1,14 @@
 import { PropsWithChildren } from 'react'
+import { ToastContainer } from 'react-toastify'
 import styled, { css } from 'styled-components'
 import tw from 'twin.macro'
 import Header from '@/components/Header'
-
 export default function Layout(props: PropsWithChildren) {
   return (
     <S.Wrapper>
       <Header />
-      {props.children}
+      <main>{props.children}</main>
+      <ToastContainer />
     </S.Wrapper>
   )
 }

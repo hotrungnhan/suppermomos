@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 // @author Ho Trung Nhan : don't look at the type please =))
-type IconInputProps = React.DetailedHTMLProps<
+type SInputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 > & {
@@ -12,7 +12,7 @@ type IconInputProps = React.DetailedHTMLProps<
   prefixElement?: ReactNode | string
   sufixElement?: ReactNode | string
 }
-const IconInput = React.forwardRef<any, IconInputProps>((props, ref) => {
+const SInput = React.forwardRef<any, SInputProps>((props, ref) => {
   const { error, sufixElement, prefixElement, ...rest } = props
 
   return (
@@ -33,5 +33,5 @@ const S = {
   ]),
   Error: styled.div(() => [tw`text-[#333333]`]),
 }
-IconInput.displayName = 'IconInput'
-export default IconInput
+SInput.displayName = 'SInput'
+export default SInput

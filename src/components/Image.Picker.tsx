@@ -1,14 +1,17 @@
 // @ts-nocheck
 
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import { useCallback, useState } from 'react'
-import Popup from 'reactjs-popup'
 import styled from 'styled-components'
 import tw from 'twin.macro'
-
 type ImagePickerProps = {
   onChange?: (value: string | undefined) => void
   values?: string[]
 }
+const Popup = dynamic(() => import('reactjs-popup'), {
+  ssr: false,
+})
 
 export default function ImagePicker(props: ImagePickerProps) {
   const [selectedImage, setSelectedImages] = useState<string | undefined>(
@@ -29,7 +32,12 @@ export default function ImagePicker(props: ImagePickerProps) {
           <S.Trigger.Wrapper {...props}>
             <S.Trigger.Content.Wrapper>
               <S.Trigger.Content.Icon>
-                <img src="add-image.svg" />
+                <Image
+                  src="images/icon/add-image.svg"
+                  alt="add image"
+                  fill
+                  tw="relative!"
+                />
               </S.Trigger.Content.Icon>
               <S.Trigger.Content.Text>Add a banner</S.Trigger.Content.Text>
             </S.Trigger.Content.Wrapper>
@@ -57,7 +65,6 @@ export default function ImagePicker(props: ImagePickerProps) {
                         tw`outline-4 outline outline-blue-400`,
                     ]}
                     onClick={() => {
-                      console.log(index)
                       setCurrentSelectImage(index)
                     }}
                   />

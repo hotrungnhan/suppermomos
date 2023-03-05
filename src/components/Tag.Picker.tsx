@@ -53,6 +53,6 @@ const S = {
   Unselected: styled.div(() => [
     tw`rounded px-2 py-1 bg-[#F2F4F7] text-[#344054]`,
   ]),
-  SelectedWrapper: styled.div(() => [tw`flex gap-4`]),
-  UnselectedWrapper: styled.div(() => [tw`flex gap-4`]),
+  SelectedWrapper: styled.div(() => [tw`flex gap-4 flex-wrap`]),
+  UnselectedWrapper: styled.div(() => [tw`flex gap-4 flex-wrap`]),
 }
