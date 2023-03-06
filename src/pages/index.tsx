@@ -59,7 +59,14 @@ export default function Home() {
     toast.error(<div tw="w-full">{err}</div>)
   }
   const onSubmit = (data: any) => {
-    data.startAt = new Date(data.startAtDate + ' ' + data.startAtTime + 'Z')
+    data.startAt = new Date(
+      data.startAtDate +
+        ' ' +
+        data.startAtTime +
+        new Date().getTimezoneOffset() / 60
+    )
+    console.log(data.startAtDate + ' ' + data.startAtTime)
+
     delete data.startAtDate
     delete data.startAtTime
     axios
