@@ -31,6 +31,7 @@ const privacys = ['Public', 'Curated Audience', 'Community Only']
 export default function Home() {
   const { register, handleSubmit, setValue } = useForm()
   useEffect(() => {
+    // declare for special picker
     register('tags', {
       value: [],
     })
