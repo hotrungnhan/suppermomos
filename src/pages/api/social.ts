@@ -1,22 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-
-type Data = {
-  title: string
-  startAt: Date
-  venue: string
-  capacity: number
-  price: number
-  description: string
-  isManualApprove: boolean
-  privacy: string
-  banner: string
-  tags: string[]
-}
+import { Social } from '@/types/social'
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<Social>
 ) {
   if (req.method == 'POST') {
     return await fetch('https://api.supermomos-dev.com/interview/social', {

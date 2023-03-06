@@ -11,6 +11,7 @@ import Sinput from '@/components/Sinput'
 import 'twin.macro'
 import TagPicker from '@/components/Tag.Picker'
 import 'react-toastify/dist/ReactToastify.css'
+import { useRouter } from 'next/router'
 
 const tags = ['Engineering', 'Product', 'Marketing', 'Design']
 
@@ -30,6 +31,7 @@ const privacys = ['Public', 'Curated Audience', 'Community Only']
 
 export default function Home() {
   const { register, handleSubmit, setValue } = useForm()
+  const router = useRouter()
   useEffect(() => {
     // declare for special picker
     register('tags', {
@@ -45,7 +47,6 @@ export default function Home() {
     })
   }, [register])
   const onSubmitFieldValidationError = (data: any) => {
-    console.log(data)
     const err = Object.entries(data).map(([key, data]: any) => {
       return (
         <div key={key + data.type} tw="text-red-700">
@@ -73,6 +74,12 @@ export default function Home() {
       .post('api/social', data)
       .then((req) => {
         toast.success('Create socials success !!!')
+        setTimeout(() => {
+          return router.push({
+            pathname: '/social',
+            query: { data: JSON.stringify(req.data) },
+          })
+        }, 300)
       })
       .catch((err) => {
         toast.error(err.message)
