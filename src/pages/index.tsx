@@ -33,7 +33,6 @@ export default function Home() {
   useEffect(() => {
     register('tags', {
       value: [],
-      required: true,
     })
     register('title', {
       value: 'untitle',
