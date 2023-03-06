@@ -15,17 +15,16 @@ import 'react-toastify/dist/ReactToastify.css'
 const tags = ['Engineering', 'Product', 'Marketing', 'Design']
 
 const banners = [
-  'https://picsum.photos/200/300',
-  'https://picsum.photos/250/250',
-  'https://picsum.photos/300/300',
-  'https://picsum.photos/350/250',
-  'https://picsum.photos/200/150',
-  'https://picsum.photos/300/300',
-  'https://picsum.photos/350/250',
-  'https://picsum.photos/200/150',
-  'https://picsum.photos/300/300',
-  'https://picsum.photos/350/250',
-  'https://picsum.photos/200/150',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_1.jpg',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_2.jpg',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_3.jpg',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_4.jpg',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_5.jpg',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_6.jpg',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_7.jpg',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_8.jpg',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_9.jpg',
+  'https://supermomos-app-resources-us.s3.amazonaws.com/Images/SocialBanner/banner_10.jpg',
 ]
 const privacys = ['Public', 'Curated Audience', 'Community Only']
 
