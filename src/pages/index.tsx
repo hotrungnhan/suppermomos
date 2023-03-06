@@ -36,7 +36,7 @@ export default function Home() {
       required: true,
     })
     register('title', {
-      value: '',
+      value: 'untitle',
       required: true,
     })
     register('banner', {
