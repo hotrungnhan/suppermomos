@@ -25,8 +25,8 @@ export default function Home(props: Social) {
                 <Image
                   src="images/icon/calendar.svg"
                   alt="calendar"
-                  width={24}
-                  height={24}
+                  width={32}
+                  height={32}
                   tw="relative!"
                 />
                 <p>{new Date(props.startAt).toLocaleDateString()}</p>
@@ -34,9 +34,9 @@ export default function Home(props: Social) {
               <S.ItemWrapper>
                 <Image
                   src="images/icon/clock.svg"
-                  alt="calendar"
-                  width={24}
-                  height={24}
+                  alt="clock"
+                  width={40}
+                  height={40}
                   tw="relative!"
                 />
                 <p>{new Date(props.startAt).toLocaleTimeString()}</p>
@@ -97,6 +97,6 @@ export default function Home(props: Social) {
 }
 
 const S = {
-  ItemWrapper: styled.div(tw`gap-2 flex`),
+  ItemWrapper: styled.div(tw`gap-2 flex items-center`),
   Image: styled.img``,
 }
