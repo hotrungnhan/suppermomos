@@ -16,7 +16,7 @@ export default function Home(props: Social) {
     <div tw="p-4 container mx-auto mt-16">
       <div tw="flex justify-between h-max gap-4">
         <section id="title" tw="relative w-[40%] overflow-visible mt-8">
-          <div tw="bg-none w-fit text-left min-w-[3rem] max-w-[110%] border-none outline-0 bg-amaranth-deep-purple text-white text-5xl font-bold">
+          <div tw="bg-none w-fit text-left min-w-[3rem] max-w-[110%] border-none outline-0 break-words bg-amaranth-deep-purple text-white text-5xl font-bold">
             {props.title}
           </div>
           <div tw="flex flex-col gap-4 mt-4 font-medium">
@@ -82,7 +82,7 @@ export default function Home(props: Social) {
           alt="banner"
         />
       </div>
-      <div tw="w-[60%] rounded-2xl flex flex-col gap-4 ">
+      <div tw="w-[60%] rounded-2xl flex flex-col gap-4 mt-8 ">
         <section id="description" tw="flex flex-col">
           <div
             placeholder="Description of your event.."
