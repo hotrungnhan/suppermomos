@@ -120,7 +120,7 @@ const S = {
       Icon: styled.strong(() => [tw` inline-block mr-4`]),
       Text: styled.strong(() => [tw`text-blue-sapphire `]),
       Image: styled.img(() => [
-        tw`object-fill w-[36rem] h-[24rem] mx-auto border-dashed border rounded-bl-[40px] rounded-tr-[40px] `,
+        tw`object-fill max-h-[24rem] mx-auto border-dashed border rounded-bl-[40px] rounded-tr-[40px] `,
       ]),
     },
   },

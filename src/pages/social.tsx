@@ -13,7 +13,7 @@ Home.getInitialProps = (ctx: NextPageContext) => {
 
 export default function Home(props: Social) {
   return (
-    <div tw="p-4 container mx-auto mt-16">
+    <div tw="container p-4 mx-auto mt-16">
       <div tw="flex justify-between h-max gap-4">
         <section id="title" tw="relative w-[40%] overflow-visible mt-8">
           <div tw="bg-none w-fit text-left min-w-[3rem] max-w-[110%] border-none outline-0 break-words bg-amaranth-deep-purple text-white text-5xl font-bold">
@@ -77,7 +77,7 @@ export default function Home(props: Social) {
           </div>
         </section>
         <img
-          tw="w-[60%] rounded-bl-[40px] rounded-tr-[40px]"
+          tw="w-[60%] max-h-[24rem] rounded-bl-[40px] rounded-tr-[40px]"
           src={props.banner}
           alt="banner"
         />
