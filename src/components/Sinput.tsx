@@ -26,12 +26,14 @@ const SInput = React.forwardRef<any, SInputProps>((props, ref) => {
 })
 const S = {
   Wrapper: styled.div(() => [tw`flex justify-around py-4 gap-1`]),
-  Element: styled.a(() => [tw`text-[#333333] m-auto inline-block flex-nowrap`]),
+  Element: styled.a(() => [
+    tw`text-dark-charcoal m-auto inline-block flex-nowrap`,
+  ]),
   Input: styled.input(({ type }) => [
-    tw`text-[#333333] shrink py-1 rounded px-2 outline-0`,
+    tw`text-dark-charcoal shrink py-1 rounded px-2 outline-0`,
     type != 'radio' && type != 'checkbox' ? tw` w-full` : ``,
   ]),
-  Error: styled.div(() => [tw`text-[#333333]`]),
+  Error: styled.div(() => [tw`text-dark-charcoal`]),
 }
 SInput.displayName = 'SInput'
 export default SInput

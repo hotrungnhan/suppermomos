@@ -33,7 +33,8 @@ export default function TagPicker(props: TagPickerProps) {
             <Image
               src="images/icon/cross.svg"
               tw="inline my-auto relative!"
-              fill
+              width={8}
+              height={8}
               alt="cross"
             />
           </S.Selected>
@@ -55,7 +56,7 @@ TagPicker.default = {
 const S = {
   Wrapper: styled.div(() => [tw`flex flex-col gap-4`]),
   Selected: styled.div(() => [
-    tw`rounded px-2 py-1 bg-[#F9F5FF] text-[#942F70]`,
+    tw`rounded px-2 py-1 bg-[#F9F5FF] text-amaranth-deep-purple`,
   ]),
   Unselected: styled.div(() => [
     tw`rounded px-2 py-1 bg-[#F2F4F7] text-[#344054]`,

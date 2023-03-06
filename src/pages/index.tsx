@@ -82,7 +82,7 @@ export default function Home() {
             // eslint-disable-next-line react/no-children-prop
             children="untitle"
             suppressContentEditableWarning={true}
-            tw="bg-none w-fit text-left min-w-[3rem] max-w-[110%] border-none outline-0 bg-[#942F70] text-white text-5xl font-bold"
+            tw="bg-none w-fit text-left min-w-[3rem] max-w-[110%] border-none outline-0 bg-amaranth-deep-purple text-white text-5xl font-bold"
           />
           <div tw="flex gap-2">
             <Sinput
@@ -183,7 +183,7 @@ export default function Home() {
           ></textarea>
         </section>
         <section id="settings" tw="flex flex-col bg-white p-8 rounded-xl">
-          <h3 tw="bg-[#FEF452] text-[#942F70] w-fit px-2 py-2 font-bold text-2xl">
+          <h3 tw="bg-lemon-yellow text-amaranth-deep-purple w-fit px-2 py-2 font-bold text-2xl">
             Setting
           </h3>
           <div tw="flex">
@@ -220,9 +220,8 @@ export default function Home() {
             values={tags}
           />
         </section>
-
         <button
-          tw="border-none py-2 rounded bg-[#FEF452] text-[#942F70]"
+          tw="border-none py-2 rounded bg-lemon-yellow text-amaranth-deep-purple"
           onClick={handleSubmit(onSubmit, onSubmitFieldValidationError)}
         >
           Create social

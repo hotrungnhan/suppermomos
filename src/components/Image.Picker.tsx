@@ -86,7 +86,7 @@ export default function ImagePicker(props: ImagePickerProps) {
               Close
             </S.Model.Button.Default>
             <S.Model.Button.Default
-              tw="bg-[#FEF452] text-[#942F70] disabled:bg-[gray]"
+              tw="bg-lemon-yellow text-amaranth-deep-purple disabled:bg-[gray]"
               onClick={() => {
                 emitOnChange()
                 close()
@@ -118,7 +118,7 @@ const S = {
     Content: {
       Wrapper: styled.div(() => [tw`my-auto flex`]),
       Icon: styled.strong(() => [tw` inline-block mr-4`]),
-      Text: styled.strong(() => [tw`text-[#14597A] `]),
+      Text: styled.strong(() => [tw`text-blue-sapphire `]),
       Image: styled.img(() => [
         tw`object-fill w-[36rem] h-[24rem] mx-auto border-dashed border rounded-bl-[40px] rounded-tr-[40px] `,
       ]),

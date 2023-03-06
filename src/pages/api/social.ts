@@ -2,7 +2,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-  name: string
+  title: string
+  startAt: Date
+  venue: string
+  capacity: number
+  price: number
+  description: string
+  isManualApprove: boolean
+  privacy: string
+  banner: string
+  tags: string[]
 }
 
 export default async function handler(
@@ -18,9 +27,7 @@ export default async function handler(
       },
       body: JSON.stringify(req.body),
     })
-      .then(async (r) => {
-        res.status(r.status).json(await r.json())
-      })
+      .then(async (r) => res.status(r.status).json(await r.json()))
       .catch((err) => res.status(err.status || 500).send(err.message))
   }
   return res.status(401)

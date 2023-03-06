@@ -3,7 +3,19 @@ module.exports = {
   content: [],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        'amaranth-deep-purple': '#942F70',
+        'lemon-yellow': '#FEF452',
+        'blue-sapphire': '#FEF452',
+        'dark-charcoal': '#333333',
+      },
+      fontFamily: {
+        display: ['Inter', 'Roboto'],
+        body: ['Inter', 'Roboto'],
+        sans: ['Inter', 'Roboto'],
+        serif: ['Inter', 'Roboto'],
+        mono: ['Inter', 'Roboto'],
+      },
     },
   },
   plugins: [],

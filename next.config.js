@@ -5,5 +5,4 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-
-module.exports = withTwin(nextConfig);
+module.exports = withTwin(nextConfig)
