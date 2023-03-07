@@ -1,7 +1,7 @@
 # Supermomos interview
 
 ## Main techincal and libs
-- Backbone by `styled component` with `tailwind` unity tools. 
+- UI lib: Backbone by `styled component` with `tailwind` unity tools. 
 - Form builder : `react-hook-form`
 ## Focus on: 
 - Simple
